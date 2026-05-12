@@ -23,7 +23,15 @@ Returns a paginated feed of posts for the authenticated user.
 
 ## 🔐 Authentication
 
-All requests require an authenticated `current_user` (token-based or session-based depending on implementation).
+In production, all endpoints require authentication via `current_user` (token-based or session-based depending on configuration).
+
+For demo and local development purposes, authentication is currently disabled and `current_user` is mocked in the controller:
+
+```ruby
+def current_user
+  User.first
+end
+```
 
 ---
 
@@ -31,7 +39,6 @@ All requests require an authenticated `current_user` (token-based or session-bas
 
 ```http
 GET /api/v1/feed?page=1
-Authorization: <token>
 
 [
   {
