@@ -7,7 +7,7 @@ class CreateFeedItems < ActiveRecord::Migration[7.1]
       t.datetime :created_at, null: false
     end
 
-    add_index :feed_items, [:user_id, :created_at]
-    add_index :feed_items, [:user_id, :post_id], unique: true, name: "index_unique_feed_items"
+    add_index :feed_items, [ :user_id, :created_at ]
+    add_index :feed_items, [ :user_id, :post_id ], unique: true, name: "index_unique_feed_items"
   end
 end

@@ -6,7 +6,7 @@ module Api
       def index
         feed_items = FeedItem
           .where(user_id: current_user.id)
-          .includes(post: [:user])
+          .includes(post: [ :user ])
           .order(created_at: :desc)
           .page(params[:page])
           .per(10)

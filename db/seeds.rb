@@ -18,7 +18,7 @@ users = 5.times.map do |i|
 end
 
 users.each do |user|
-  (users - [user]).sample(2).each do |followed|
+  (users - [ user ]).sample(2).each do |followed|
     Subscription.create!(
       user: user,
       followed_user: followed
@@ -36,4 +36,3 @@ users.each do |user|
     )
   end
 end
-

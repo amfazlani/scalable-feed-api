@@ -7,6 +7,6 @@ class CreateSubscriptions < ActiveRecord::Migration[7.1]
       t.timestamps
     end
 
-    add_index :subscriptions, [:user_id, :followed_user_id], unique: true, name: "index_unique_follow"
+    add_index :subscriptions, [ :user_id, :followed_user_id ], unique: true, name: "index_unique_follow"
   end
 end

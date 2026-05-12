@@ -5,9 +5,9 @@ gem "rails", "~> 8.1.3"
 gem "pg"
 # Use the Puma web server [https://github.com/puma/puma]
 gem "puma", ">= 5.0"
-gem 'sidekiq'
+gem "sidekiq"
 gem "kaminari"
-gem 'bcrypt'
+gem "bcrypt"
 # Build JSON APIs with ease [https://github.com/rails/jbuilder]
 # gem "jbuilder"
 
@@ -49,7 +49,7 @@ group :development, :test do
 
   # Omakase Ruby styling [https://github.com/rails/rubocop-rails-omakase/]
   gem "rubocop-rails-omakase", require: false
-  gem 'rspec-rails'
-  gem 'factory_bot_rails'
-  gem 'pry'
+  gem "rspec-rails"
+  gem "factory_bot_rails"
+  gem "pry"
 end

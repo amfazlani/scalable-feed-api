@@ -4,13 +4,12 @@ Rails.application.routes.draw do
 
   namespace :api do
     namespace :v1 do
-
       get "/feed", to: "feeds#index"
 
-      resources :posts, only: [:create, :show]
-      resources :subscriptions, only: [:create, :destroy]
-      resources :comments, only: [:create]
-      resources :likes, only: [:create]
+      resources :posts, only: [ :create, :show ]
+      resources :subscriptions, only: [ :create, :destroy ]
+      resources :comments, only: [ :create ]
+      resources :likes, only: [ :create ]
     end
   end
 end
