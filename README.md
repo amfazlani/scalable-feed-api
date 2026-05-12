@@ -209,6 +209,29 @@ Future: Cursor pagination using (id \< last_id)..per(10)
 
 ---
 
+## 🧪 Running the Project Tests
+
+This project uses RSpec for testing and Sidekiq in inline mode during test execution to ensure deterministic behavior for background jobs.
+
+### Install dependencies
+
+```bash
+bundle install
+```
+
+### Set up the test database
+
+```
+rails db:create RAILS_ENV=test
+rails db:migrate RAILS_ENV=test
+```
+
+### Run the full test suite
+
+```
+bundle exec rspec
+``` 
+
 # 🧠 Conclusion
 
 A precomputed social feed system using: - Sidekiq background
