@@ -7,6 +7,7 @@ gem "pg"
 gem "puma", ">= 5.0"
 gem 'sidekiq'
 gem "kaminari"
+gem 'bcrypt'
 # Build JSON APIs with ease [https://github.com/rails/jbuilder]
 # gem "jbuilder"
 
