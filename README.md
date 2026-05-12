@@ -33,6 +33,16 @@ def current_user
 end
 ```
 
+## 🌱 Seeding the Database
+
+This project includes sample seed data to help quickly explore the feed system.
+
+### Run seeds
+
+```bash
+rails db:seed
+```
+
 ---
 
 ## 📥 Request
